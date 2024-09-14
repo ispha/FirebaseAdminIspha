@@ -172,7 +172,7 @@ public class FirebaseAPIClient {
     }
 }
 
-struct OAuthTokenResponse: Codable {
+public struct OAuthTokenResponse: Codable {
     static let cacheKey = "OauthTokenResponse"
     let access_token: String
     let expires_in: Int

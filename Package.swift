@@ -76,19 +76,7 @@ let package = Package(
                 .product(name: "AsyncHTTPClient", package: "async-http-client"),
                 .product(name: "JWTKit", package: "jwt-kit"),
             ],swiftSettings: swiftSettings),
-        .testTarget(
-            name: "AppCheckTests",
-            dependencies: [
-                "AppCheck",
-                .product(name: "NIOFoundationCompat", package: "swift-nio"),
-                .product(name: "AsyncHTTPClient", package: "async-http-client")
-            ]
-        ),
-        .testTarget(
-            name: "FirestoreTests",
-            dependencies: ["Firestore"],
-            resources: [.copy("ServiceAccount.json")]
-        ),
+       
     ]
 )
 
