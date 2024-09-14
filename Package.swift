@@ -62,7 +62,7 @@ let package = Package(
                 .product(name: "JWTKit", package: "jwt-kit"),
             ],swiftSettings: swiftSettings),
         .target(
-            name: "FirebaseAuth",
+            name: "FirebaseAuthIspha",
             dependencies: [
                 "FirebaseApp",
                 .product(name: "AsyncHTTPClient", package: "async-http-client"),
@@ -70,7 +70,7 @@ let package = Package(
                 .product(name: "AnyCodable", package: "AnyCodable"),
             ],swiftSettings: swiftSettings),
         .target(
-            name: "FirebaseMessaging",
+            name: "FirebaseMessagingIspha",
             dependencies: [
                 "FirebaseApp",
                 .product(name: "AsyncHTTPClient", package: "async-http-client"),
