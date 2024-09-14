@@ -19,8 +19,8 @@ let package = Package(
             name: "Firestore",
             targets: ["Firestore"]),
         .library(
-            name: "FirebaseAuth",
-            targets: ["FirebaseAuth"]),
+            name: "FirebaseAuthIspha",
+            targets: ["FirebaseAuthIspha"]),
         .library(
             name: "FirebaseMessagingIspha", 
             targets: ["FirebaseMessagingIspha"]),
