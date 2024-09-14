@@ -9,7 +9,7 @@ import Foundation
 import AsyncHTTPClient
 @_exported import FirebaseApp
 
-public class FirebaseMessaging {
+public class FirebaseMessagingIspha {
     public static func getMessaging(app: FirebaseApp = FirebaseApp.app) throws -> MessagingClient {
         guard let serviceAccount = app.serviceAccount else {
             throw NSError(domain: "ServiceAccountError", code: 500, userInfo: [NSLocalizedDescriptionKey: "Service Account is not initialized"])
