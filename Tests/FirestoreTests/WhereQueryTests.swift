@@ -5,7 +5,7 @@ final class WhereQueryTests: XCTestCase {
 
     override class func setUp() {
         let serviceAccount = try! loadServiceAccount(from: "ServiceAccount")
-        FirebaseApp.initialize(serviceAccount: serviceAccount)
+        FirebaseAppIspha.initialize(serviceAccount: serviceAccount)
     }
 
     let path = "test/where/items"

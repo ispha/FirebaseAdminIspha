@@ -7,7 +7,7 @@
 
 import Foundation
 import AsyncHTTPClient
-@_exported import FirebaseApp
+@_exported import FirebaseAppIspha
 
 /**
  A class that represents Firebase Authentication.
@@ -24,7 +24,7 @@ public class FirebaseAuthIspha {
      
      - Returns: An `AuthClient` instance initialized with the default `FirebaseApp` instance.
      */
-    public static func auth(app: FirebaseApp = FirebaseApp.app) throws -> AuthClient {
+    public static func auth(app: FirebaseAppIspha = FirebaseAppIspha.app) throws -> AuthClient {
         guard let serviceAccount = app.serviceAccount else {
             throw NSError(domain: "ServiceAccountError", code: 500, userInfo: [NSLocalizedDescriptionKey: "Service Account is not initialized"])
         }

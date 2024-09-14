@@ -7,9 +7,9 @@
 
 import Foundation
 
-public final class FirebaseApp: @unchecked Sendable {
-    private static let _app = FirebaseApp()
-    public static var app: FirebaseApp {
+public final class FirebaseAppIspha: @unchecked Sendable {
+    private static let _app = FirebaseAppIspha()
+    public static var app: FirebaseAppIspha {
         get { _app }
     }
     

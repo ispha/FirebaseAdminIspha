@@ -5,7 +5,7 @@ final class FirestoreTests: XCTestCase {
 
     override class func setUp() {
         let serviceAccount = try! loadServiceAccount(from: "ServiceAccount")
-        FirebaseApp.initialize(serviceAccount: serviceAccount)
+        FirebaseAppIspha.initialize(serviceAccount: serviceAccount)
     }
 
     class func loadServiceAccount(from jsonFile: String) throws -> ServiceAccount {

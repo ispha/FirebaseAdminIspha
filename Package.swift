@@ -10,8 +10,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "FirebaseApp",
-            targets: ["FirebaseApp"]),
+            name: "FirebaseAppIspha",
+            targets: ["FirebaseAppIspha"]),
         .library(
             name: "AppCheck",
             targets: ["AppCheck"]),
@@ -34,7 +34,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "FirebaseApp",
+            name: "FirebaseAppIspha",
             dependencies: [
                 .product(name: "NIOFoundationCompat", package: "swift-nio"),
                 .product(name: "AsyncHTTPClient", package: "async-http-client"),
@@ -48,7 +48,7 @@ let package = Package(
         .target(
             name: "AppCheck",
             dependencies: [
-                "FirebaseApp",
+                "FirebaseAppIspha",
                 .product(name: "AsyncHTTPClient", package: "async-http-client"),
                 .product(name: "JWTKit", package: "jwt-kit")
             ],
@@ -56,7 +56,7 @@ let package = Package(
         .target(
             name: "Firestore",
             dependencies: [
-                "FirebaseApp",
+                "FirebaseAppIspha",
                 .product(name: "AsyncHTTPClient", package: "async-http-client"),
                 .product(name: "FirestoreAPI", package: "FirebaseAPI"),
                 .product(name: "JWTKit", package: "jwt-kit"),
@@ -64,7 +64,7 @@ let package = Package(
         .target(
             name: "FirebaseAuthIspha",
             dependencies: [
-                "FirebaseApp",
+                "FirebaseAppIspha",
                 .product(name: "AsyncHTTPClient", package: "async-http-client"),
                 .product(name: "JWTKit", package: "jwt-kit"),
                 .product(name: "AnyCodable", package: "AnyCodable"),
@@ -72,7 +72,7 @@ let package = Package(
         .target(
             name: "FirebaseMessagingIspha",
             dependencies: [
-                "FirebaseApp",
+                "FirebaseAppIspha",
                 .product(name: "AsyncHTTPClient", package: "async-http-client"),
                 .product(name: "JWTKit", package: "jwt-kit"),
             ],swiftSettings: swiftSettings),

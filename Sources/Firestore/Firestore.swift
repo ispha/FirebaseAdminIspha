@@ -1,6 +1,6 @@
 import Foundation
 @_exported import FirestoreAPI
-@_exported import FirebaseApp
+@_exported import FirebaseAppIspha
 
 /**
  A class that represents a Firestore database instance.
@@ -21,15 +21,15 @@ extension Firestore {
     }
 
     /**
-     Returns a `Firestore` instance initialized with the default `FirebaseApp` instance.
+     Returns a `Firestore` instance initialized with the default `FirebaseAppIspha` instance.
      
-     - Parameter app: The `FirebaseApp` instance to use for authenticating with the Firestore database.
+     - Parameter app: The `FirebaseAppIspha` instance to use for authenticating with the Firestore database.
      
-     Use this method to obtain a `Firestore` instance that is initialized with the default `FirebaseApp` instance. This is useful if your app uses only one Firebase project and you need to access only one Firestore database.
+     Use this method to obtain a `Firestore` instance that is initialized with the default `FirebaseAppIspha` instance. This is useful if your app uses only one Firebase project and you need to access only one Firestore database.
      
-     - Returns: A `Firestore` instance initialized with the default `FirebaseApp` instance.
+     - Returns: A `Firestore` instance initialized with the default `FirebaseAppIspha` instance.
      */
-    public static func firestore(app: FirebaseApp = FirebaseApp.app) throws -> Firestore {
+    public static func firestore(app: FirebaseAppIspha = FirebaseAppIspha.app) throws -> Firestore {
         guard let serviceAccount = app.serviceAccount else {
             throw NSError(domain: "ServiceAccountError", code: 500, userInfo: [NSLocalizedDescriptionKey: "Service Account is not initialized"])
         }
@@ -45,7 +45,7 @@ extension Firestore {
     /**
      Retrieves an access token for the Firestore database.
 
-     Use this method to retrieve an access token for the Firestore database. If an access token has already been retrieved, this method returns it. Otherwise, it initializes an `AccessTokenProvider` instance with the `FirebaseApp` service account and retrieves a new access token using the `Scope` struct. The access token is then stored in the `accessToken` property of the `Firestore` instance and returned.
+     Use this method to retrieve an access token for the Firestore database. If an access token has already been retrieved, this method returns it. Otherwise, it initializes an `AccessTokenProvider` instance with the `FirebaseAppIspha` service account and retrieves a new access token using the `Scope` struct. The access token is then stored in the `accessToken` property of the `Firestore` instance and returned.
 
      - Returns: An access token for the Firestore database.
      - Throws: A `ServiceAccountError` if an error occurs while initializing the `AccessTokenProvider` instance or retrieving the access token.
