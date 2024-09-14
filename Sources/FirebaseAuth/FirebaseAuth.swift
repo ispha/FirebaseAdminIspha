@@ -14,7 +14,7 @@ import AsyncHTTPClient
  
  The `Auth` class provides methods for accessing and managing user authentication within a Firebase project.
  */
-public class FirebaseAuth {
+public class FirebaseAuthIspha {
     /**
      Returns an `AuthClient` instance initialized with the default `FirebaseApp` instance.
      
