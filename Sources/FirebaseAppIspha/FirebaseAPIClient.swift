@@ -63,6 +63,7 @@ public class FirebaseAPIClient {
     }
     
     public func makeAuthenticatedPost<T: Codable>(endpoint: String, body: Codable? = nil) -> EventLoopFuture<T> {
+      
         return getOAuthToken().flatMap { token in
             do {
                 var request = try HTTPClient.Request(url: endpoint, method: .POST)
@@ -126,12 +127,12 @@ public class FirebaseAPIClient {
         }
     }
     
-    private func getOAuthToken() -> EventLoopFuture<OAuthTokenResponse> {
+    public func getOAuthToken() -> EventLoopFuture<OAuthTokenResponse> {
         // Implement token caching logic here if needed
         return getNewOAuthToken()
     }
-    
-    private func getNewOAuthToken() -> EventLoopFuture<OAuthTokenResponse> {
+   
+    public func getNewOAuthToken() -> EventLoopFuture<OAuthTokenResponse> {
         guard let serviceAccount = serviceAccount else {
             return httpClient.eventLoopGroup.next().makeFailedFuture(FirebaseAPIError.serviceAccountNotSet)
         }
