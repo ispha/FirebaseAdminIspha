@@ -22,8 +22,8 @@ let package = Package(
             name: "FirebaseAuth",
             targets: ["FirebaseAuth"]),
         .library(
-            name: "FirebaseMessaging", 
-            targets: ["FirebaseMessaging"]),
+            name: "FirebaseMessagingIspha", 
+            targets: ["FirebaseMessagingIspha"]),
     ],
     dependencies: [
         .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.21.2"),
